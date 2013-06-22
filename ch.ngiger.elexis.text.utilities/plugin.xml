@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.preferencePages">
+      <page class="ch.ngiger.elexis.text.utilities.Preferences"
+            id="ch.elexis.text.utilities"
+            name="%page.name" />
+ 	</extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            name="%command.name"
+            categoryId="ch.elexis.text.utilities.commands.category"
+            id="ch.elexis.text.utilities.handler.runStressTestAll">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="ch.elexis.text.utilities.handler.runStressTestAll"
+            class="ch.ngiger.elexis.text.utilities.handlers.StressTestAllDocuments">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="ch.elexis.text.utilities.handler.runStressTestAll"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:ch.elexis.BriefAuswahlView">
+         <command
+               commandId="ch.elexis.text.utilities.handler.runStressTestAll"
+               label="%command.label"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

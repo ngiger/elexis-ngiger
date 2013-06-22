@@ -1,0 +1,8 @@
+h1. elexis-ngiger
+
+
+* ch.ngiger.elexis.text.utilities a stress test for the text plugin
+
+
+
+Contribution to Elexis by Niklaus Giger
